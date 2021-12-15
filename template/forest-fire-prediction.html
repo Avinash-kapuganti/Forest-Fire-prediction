@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+    color: orange;
+  }
+  h2{
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    opacity: 0.5;
+  }
+ 
+  form{
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  }
+
+  .answer{
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+    color: orange;
+  }
+</style>
+
+<body>
+  <h1> Forest fire prediction</h1>
+  <h2> predict the probability of Forest-fire occurrence</h2>
+    <form  action='/predict' method="post">
+    
+        <label for="fname">OXYGEN:</label><br>
+        <input type="text" id="fname" name="Oxygen" ><br>
+      
+        <label for="fname">TEMPERATURE:</label><br>
+        <input type="text" id="fname" name="Temperature" ><br>
+        
+        <label for="fname">HUMIDITY:</label><br>
+        <input type="text" id="fname" name="humidity" ><br>
+      
+        <input type="submit" value="Predict Probability">
+      
+      </form>
+      
+    </div class="answer">
+    <br>
+      {{pred}}<br>
+  </div>
+  <div class="alan-btn"></div>
+  <script type="text/javascript"
+ src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+<script>
+  var alanBtnInstance = alanBtn({
+    key: "2a209ae2f1b9d0916ddf5f8b5a6c55472e956eca572e1d8b807a3e2338fdd0dc/stage",
+    onCommand: function (commandData) {
+      
+    },
+    rootEl: document.getElementById("alan-btn"),
+   
+  }
+  );
+
+</script>
+</body>
+</html>
